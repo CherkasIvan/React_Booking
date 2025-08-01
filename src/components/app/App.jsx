@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Card, Container } from 'semantic-ui-react';
-import booksData from './public/books.json';
 import { BookCardContainer, FilterContainer, MenuBaseContainer } from '../../containers';
 
 class App extends Component {
-  componentDidMount() { 
-    const { setBooks } = this.props;
-    setBooks(booksData); 
-  }
+componentDidMount() {
+  const { setBooks } = this.props;
+  fetch(process.env.PUBLIC_URL + '/books.json')
+    .then(response => response.json())
+    .then(data => setBooks(data));
+}
 
   render() {
     const { books, isReady } = this.props;
