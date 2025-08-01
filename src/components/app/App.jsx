@@ -8,7 +8,7 @@ import {BookCardContainer, FilterContainer, MenuBaseContainer} from '../../conta
 class App extends Component {
   componentWillMount() {
     const {setBooks} = this.props;
-    axios.get('/books.json').then(({data}) => {
+    axios.get('books.json').then(({data}) => {
       setBooks(data);
     });
   }
