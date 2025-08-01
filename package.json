@@ -56,7 +56,7 @@
     "webpack-manifest-plugin": "1.3.2"
   },
   "scripts": {
-    "predeploy": "npm run build && cp public/404.html build/404.html",
+    "predeploy": "npm run build && copy public\\404.html build\\404.html",
     "deploy": "gh-pages -d build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
