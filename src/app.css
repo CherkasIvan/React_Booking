@@ -19,3 +19,9 @@ body {
 .card-image img {
   width: 100%;
 }
+
+.contenter{
+  display: flex;
+  column-gap: 10px;
+  flex-wrap: nowrap;
+}
